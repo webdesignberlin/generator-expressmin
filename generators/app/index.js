@@ -34,12 +34,39 @@ var expresso = yeoman.generators.Base.extend({
       {
         name: 'projectName',
         message: 'What is the name of your project?'
+      },
+      {
+        name: 'projectDescription',
+        message: 'What is the Description of your project?'
+      },
+      {
+        type: 'list',
+        name: 'projectTemplateengine',
+        message: 'How do you want to compile? Nunjucks or Handlebars',
+        choices: [
+          {
+            name: 'None (Plain html)',
+            value: 'none',
+            checked: true
+          },
+          {
+            name: 'Handlebars',
+            value: 'handlebars',
+            checked: false
+          },
+          {
+            name: 'Nunjucks',
+            value: 'nunjucks',
+            checked: false
+          }
+        ]
       }
     ];
 
     this.prompt(prompts, function (props) {
       this.authorName = props.authorName;
       this.projectName = props.projectName;
+      this.projectTemplateengine = props.projectTemplateengine;
       // To access props later use this.props.someOption;
 
       done();

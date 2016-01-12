@@ -4,10 +4,10 @@
   "description": "Yeoman generator for scaffolding express apps",
   "license": "MIT",
   "main": "generators/app/index.js",
-  "repository": "hellobrian/generator-expresso",
+  "repository": "webdesignberlin/generator-expresso",
   "author": {
-    "name": "Brian Han",
-    "url": "https://github.com/hellobrian"
+    "name": "Brian Han, Michael Seiler-Gerstmann",
+    "url": "https://github.com/webdesignberlin"
   },
   "scripts": {
     "test": "mocha"
