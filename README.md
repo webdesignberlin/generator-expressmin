@@ -1,4 +1,4 @@
-# generator-expresso [![build-status](https://travis-ci.org/hellobrian/generator-expresso.svg?branch=master)](https://travis-ci.org/hellobrian/generator-expresso)
+# generator-expressmin (forked generator-expresso) WORK IN PROGRESS  [![build-status](https://travis-ci.org/hellobrian/generator-expresso.svg?branch=master)](https://travis-ci.org/hellobrian/generator-expresso)
 
 > [Yeoman](http://yeoman.io) generator
 
