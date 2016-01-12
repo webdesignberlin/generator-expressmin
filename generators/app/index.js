@@ -7,7 +7,7 @@ const yosay = require('yosay');
 const introMessage = () => {
   console.log(
     `
-    [Expresso]
+    [Expressmin]
 
     A generator for scaffolding a simple express app:
 
@@ -106,13 +106,18 @@ var expresso = yeoman.generators.Base.extend({
       'mocha',
       'supertest'
     ], {saveDev: true });
-    this.npmInstall(['express', 'express-nunjucks', 'morgan'], { save: true });
+    if (projectTemplateengine == "nunjucks") {
+      this.npmInstall(['express', 'express-nunjucks', 'morgan'], {save: true});
+    }
+    if (projectTemplateengine == "handlebars") {
+      this.npmInstall(['express', 'express-handlebars', 'morgan'], {save: true});
+    }
   },
 
   end: function () {
     this.log(`
 
-      Expresso has successfully completed your express scaffold!
+      Expressmin has successfully completed your express scaffold!
 
       Run the app:
       $ npm run dev
