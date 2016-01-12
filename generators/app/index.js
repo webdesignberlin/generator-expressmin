@@ -66,6 +66,7 @@ var expresso = yeoman.generators.Base.extend({
     this.prompt(prompts, function (props) {
       this.authorName = props.authorName;
       this.projectName = props.projectName;
+      this.projectDescription = probs.projectDescription;
       this.projectTemplateengine = props.projectTemplateengine;
       // To access props later use this.props.someOption;
 
