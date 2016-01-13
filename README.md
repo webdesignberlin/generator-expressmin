@@ -7,7 +7,7 @@
 
 ```bash
 npm install -g yo
-npm install -g generator-expresso
+npm install -g generator-expressmin
 ```
 
 Finally, initiate the generator:
@@ -19,7 +19,7 @@ yo expresso
 ## Features
 
 - express
-- nunjucks
+- handlebars
 - gulp
   - autoprefixer
   - sass

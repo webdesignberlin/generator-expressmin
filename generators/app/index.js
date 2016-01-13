@@ -11,7 +11,7 @@ const introMessage = () => {
 
     A generator for scaffolding a simple express app:
 
-    * Nunjucks
+    * Handlebars
     * SCSS
     * Gulp
     * Mocha
@@ -38,7 +38,8 @@ var expresso = yeoman.generators.Base.extend({
       {
         name: 'projectDescription',
         message: 'What is the Description of your project?'
-      },
+      }
+      /*,
       {
         type: 'list',
         name: 'projectTemplateengine',
@@ -60,14 +61,14 @@ var expresso = yeoman.generators.Base.extend({
             checked: false
           }
         ]
-      }
+      }*/
     ];
 
     this.prompt(prompts, function (props) {
       this.authorName = props.authorName;
       this.projectName = props.projectName;
       this.projectDescription = props.projectDescription;
-      this.projectTemplateengine = props.projectTemplateengine;
+      //this.projectTemplateengine = props.projectTemplateengine.value;
       // To access props later use this.props.someOption;
 
       done();
@@ -107,12 +108,12 @@ var expresso = yeoman.generators.Base.extend({
       'mocha',
       'supertest'
     ], {saveDev: true });
-    if (projectTemplateengine == "nunjucks") {
+    /*if (projectTemplateengine == "nunjucks") {
       this.npmInstall(['express', 'express-nunjucks', 'morgan'], {save: true});
     }
-    if (projectTemplateengine == "handlebars") {
-      this.npmInstall(['express', 'express-handlebars', 'morgan'], {save: true});
-    }
+    if (projectTemplateengine == "handlebars") {*/
+    this.npmInstall(['express', 'express-handlebars', 'morgan'], {save: true});
+    /*}*/
   },
 
   end: function () {
